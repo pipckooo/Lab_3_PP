@@ -35,7 +35,7 @@ public class Main {
         sc.close();
     }
 
-    // ------------------- НОВА ЛОГІКА ВИБОРУ ДІЇ -------------------
+
 
     public static int initialChoice(Scanner scanner) {
         int choice;
@@ -48,11 +48,11 @@ public class Main {
             if (scanner.hasNextInt()) {
                 choice = scanner.nextInt();
                 if (choice == 1 || choice == 2) {
-                    scanner.nextLine(); // Очищення буфера після nextInt()
+                    scanner.nextLine();
                     return choice;
                 }
             } else {
-                scanner.next(); // Споживання невірного вводу
+                scanner.next();
             }
             System.out.println("❌ Невірний вибір. Введіть 1 або 2.");
         } while (true);
@@ -154,7 +154,7 @@ public class Main {
             System.out.println("1: 3 на 4 (3 союзники, 4 вороги)");
             System.out.println("2: 2 на 2 (2 союзники, 2 вороги)");
             System.out.println("3: 3 на 3 (3 союзники, 3 вороги)");
-            System.out.println("4: 1 на 1 (1 союзник, 1 ворог) - НОВИЙ");
+            System.out.println("4: 1 на 1 (1 союзник, 1 ворог)");
             System.out.print("Ваш вибір (1-4): ");
 
             if (scanner.hasNextInt()) {
