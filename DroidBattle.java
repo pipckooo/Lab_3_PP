@@ -1,3 +1,4 @@
+
 package droids;
 
 import java.io.FileWriter;
@@ -46,7 +47,7 @@ public class DroidBattle {
         }
     }
 
-    // ------------------- ГОЛОВНИЙ ЦИКЛ -------------------
+
 
 
     public void startBattle() {
@@ -101,11 +102,11 @@ public class DroidBattle {
         log("\n--- Хід дроїда: " + currentDroid.getName() +
                 " (" + currentDroid.getType() + ") ---");
 
-        String type = currentDroid.getType();
 
-        if (type.equals("Healer") || type.equals("Buffer")) {
-            currentDroid.performMainAction();
-        } else if (type.equals("Attacker") || type.equals("Defender")) {
+        currentDroid.performMainAction();
+
+
+        if (currentDroid.isAlive()) {
             handleAttackerTurn(currentDroid);
         }
 
@@ -263,7 +264,7 @@ public class DroidBattle {
     /** Заповнює команду дроїдами, обраними користувачем. */
     public static void setTeam(int count, List<Droid> team, Scanner scanner) {
 
-        scanner.nextLine();
+
 
         int teamCount = 0;
 
